@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Navbar({ toggleDarkMode, darkMode }) {
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-gray-100 dark:bg-gray-800 shadow">
-      <div className="text-xl font-bold">MyApp</div>
+      <div className="text-xl font-bold">Aviation Assembly</div>
       <div className="flex gap-4 items-center">
         <Link to="/" className="hover:underline">
           Home

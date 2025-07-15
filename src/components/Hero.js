@@ -12,9 +12,9 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="bg-white bg-opacity-80 p-10 rounded shadow-lg text-center"
       >
-        <h1 className="text-4xl font-bold mb-4">Welcome to ChurchName</h1>
+        <h1 className="text-4xl font-bold mb-4">Welcome to ICGC - Aviation Assembly</h1>
         <p className="text-gray-700">
-          Join us every Sunday for worship and fellowship.
+          Join us every Sunday for worship and fellowship in Love, Faith and Hope.
         </p>
       </motion.div>
     </section>
