@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section className="mt-20 px-6 py-10 max-w-xl mx-auto">
+    <section className="mt-20 px-6 py-10 max-w-xl mx-auto p-4 animate-fadeIn">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <form className="space-y-4">
         <input
