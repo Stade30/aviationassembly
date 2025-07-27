@@ -28,7 +28,7 @@ const HeroSlider = () => {
           key={idx}
           src={img}
           alt={`Slide ${idx + 1}`}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+          className={`absolute top-0 left-0 w-full object-cover h-full transition-opacity duration-1000 ease-in-out ${
             idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         />

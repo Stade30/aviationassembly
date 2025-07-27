@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-globe">
       {/* Social Topbar */}
-      <div className="bg-topnavbg/85 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg">
+      <div className="bg-topnavbg/100 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg">
         {[FaFacebook, FaInstagram, FaTiktok, FaYoutube].map((Icon, idx) => (
           <a
             key={idx}
@@ -54,11 +54,11 @@ const Navbar = () => {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black/60 text-white shadow-md"
-            : "bg-black/60 text-white"
+            ? "bg-black/80 text-white shadow-md"
+            : "bg-transparent text-topnavbg"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between mt-4">
           <img src={logo} alt="Logo" className="h-12 sm:h-14" />
 
           {/* Desktop Nav */}
