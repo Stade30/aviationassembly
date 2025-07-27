@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Ministries from "./pages/Ministries";
-import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Membership from "./pages/Membership";
 import Navbar from "./components/Navbar";
@@ -13,19 +12,19 @@ import Signup from "./pages/user-authn/Signup";
 
 const App = () => {
   return (
-    <main className="min-h-screen flex flex-col justify-center bg-globe bg-cover relative px-4 pt-28 ">
-      <div className="min-h-screen flex flex-col transition-colors duration-500 bg-white dark:bg-green-800 dark:text-white">
-        <Navbar />
+    <div className="bg-globe bg-cover bg-center bg-topnavbg/15 bg-blend-overlay ring-8 ring-white shadow-white/50">
+      <Navbar />
+      <main className="min-h-screen flex flex-col justify-center relative  pt-28">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="#" element={<Ministries />} />
+          <Route path="ministries" element={<Ministries />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="#" element={<Membership />} />
+          <Route path="membership" element={<Membership />} />
         </Routes>
         <Footer />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 

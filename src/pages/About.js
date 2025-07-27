@@ -9,7 +9,7 @@ import {
 
 const About = () => {
   return (
-    <div className="p-6 animate-fadeIn">
+    <div className="p-6 mt-6">
       <div className="bg-white rounded-lg shadow-2xl p-8 max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold mb-4 text-gray-700 font-sans">
           About Our Church
