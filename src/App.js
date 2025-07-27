@@ -7,12 +7,14 @@ import Ministries from "./pages/Ministries";
 import Contact from "./pages/Contact";
 import Membership from "./pages/Membership";
 import Navbar from "./components/Navbar";
-import Login from "./pages/user-authn/Login";
-import Signup from "./pages/user-authn/Signup";
 
 const App = () => {
   return (
-    <div className="bg-globe bg-cover bg-center bg-topnavbg/15 bg-blend-overlay ring-8 ring-white shadow-white/50">
+    <div
+      className="bg-globe bg-cover bg-center bg-topnavbg/15 
+            bg-blend-overlay ring-8 ring-white shadow-white/50
+            "
+    >
       <Navbar />
       <main className="min-h-screen flex flex-col justify-center relative  pt-28">
         <Routes>
