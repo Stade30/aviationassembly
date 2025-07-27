@@ -58,7 +58,7 @@ const Navbar = () => {
             : "bg-transparent text-topnavbg"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between mt-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between py-4">
           <img src={logo} alt="Logo" className="h-12 sm:h-14" />
 
           {/* Desktop Nav */}
