@@ -13,10 +13,10 @@ const Ministries = () => {
   return (
     <div className="relative group">
       {/* Trigger element */}
-      <span tabIndex={0} className="hover: text-white-700 cursor-pointer">
+      <span tabIndex={0} className="hover: text-topnavbg cursor-pointer">
         Ministries
         <FaChevronDown
-          className="inline-block ml-1 text-gray-500"
+          className="inline-block ml-5 text-topnavbg-500"
           onClick={toggleDropdown}
         />
       </span>
@@ -25,7 +25,7 @@ const Ministries = () => {
       {isOpen && (
         <div
           className="
-              absolute right-0 mt-2 w-40 rounded-lg bg-white text-topnavbg shadow-lg z-50
+              absolute right-0 mt-2 w-40 rounded-lg bg-topnavbg text-topnavbg shadow-lg z-50
               transition-all duration-300 ease-out transform
               opacity-0 scale-95 -translate-y-2 invisible
               group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:visible
