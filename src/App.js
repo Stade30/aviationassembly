@@ -11,9 +11,7 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <div
-      className="bg-globe bg-cover bg-center bg-topnavbg/15 
-            bg-blend-overlay ring-8 ring-white shadow-white/50
-            "
+      className="bg-globe bg-cover bg-center bg-fixed bg-no-repeat w-full min-h-screen"
     >
       <Navbar />
       <main className="min-h-screen flex flex-col justify-center relative  pt-28">

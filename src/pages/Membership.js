@@ -12,16 +12,6 @@ const Membership = () => {
   return (
     <div className="relative group">
       {/* Trigger element */}
-      <span
-        tabIndex={0}
-        className=" text-white-700 dark:text-gray-300 cursor-pointer focus:outline-none"
-      >
-        Member?
-        <FaChevronDown
-          className="inline-block ml-1 text-gray-500"
-          onClick={toggleDropdown}
-        />
-      </span>
 
       {/* Dropdown Menu */}
       {isOpen && (

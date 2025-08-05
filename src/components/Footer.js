@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#163F1B] text-center text-sm py-3 shadow-inner">
+    <footer className="bg-topnavbg text-center text-sm py-3 shadow-inner">
       <div className="">
         <div></div>
         <div></div>
