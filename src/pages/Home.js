@@ -15,7 +15,6 @@ import declarationImg from "../assets/declaration.jpg";
 import prayerrequest from "../assets/open-bible.jpeg";
 import HeroSlider from "../components/HeroSlider";
 import PrayerRequest from "./PrayerRequest";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -58,10 +57,11 @@ const Home = () => {
       <HeroSlider />
       {/* Welcome Section */}
 
-      <section className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative">
-        <div className="max-w-screen-xl mx-auto flex justify-center">
-          <div className="relative z-20 w-full md:w-3/4 bg-blue-100 backdrop-blur-md rounded-xl shadow-xl p-8 space-y-6">
-            <h2 className="text-3xl font-extrabold text-center md:text-left text-[#163F1B]">
+      <section className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm">
+        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl shadow-xl p-8">
+          {/* Left: Welcome Message */}
+          <div className="w-full md:w-2/3 space-y-6 mt-6">
+            <h2 className="text-3xl font-extrabold text-[#163F1B] ">
               Welcome to ICGC Aviation
             </h2>
 
@@ -72,55 +72,51 @@ const Home = () => {
               you are part of our family.
             </p>
 
-            
-
-            {/* Social Icons and Animated Profile Image */}
-            <div className="flex flex-col md:flex-row items-center md:items-end justify-between pt-4 gap-6">
-              {/* Social Icons */}
-              <ul className="flex gap-5">
-                {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
-                  <li key={idx}>
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-gray-500 hover:scale-110 transform transition-transform duration-300 ${hoverColor}`}
-                    >
-                      <Icon className="text-3xl" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Animated Profile Image with Caption */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex flex-col items-center"
-              >
-                <img
-                  src={leadpastor}
-                  alt="Lead Pastor"
-                  className="w-32 h-32 rounded-full border-2 border-white shadow-xl object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <p
-                  className="mt-2 text-lg italic font-light text-gray-600"
-                  style={{ fontFamily: "cursive" }}
-                >
-                  Ps. Jim Emmitt Konadu
-                </p>
-                <p
-                  className="mt-2 text-lg italic font-light text-gray-600"
-                  style={{ fontFamily: "cursive" }}
-                >
-                  Lead Pastor
-                </p>
-              </motion.div>
-            </div>
+            {/* Social Icons */}
+            <ul className="flex justify-center gap-5 pt-4">
+              {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
+                <li key={idx}>
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-gray-500 hover:scale-110 transform transition-transform duration-300 ${hoverColor}`}
+                  >
+                    <Icon className="text-3xl" />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          {/* Right: Profile Picture */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center w-full md:w-1/3"
+          >
+            <img
+              src={leadpastor}
+              alt="Lead Pastor"
+              className="w-48 h-48 rounded-full shadow-xl object-cover transition-transform duration-500 hover:scale-105"
+            />
+            <p
+              className="mt-3 text-lg italic font-light text-gray-600"
+              style={{ fontFamily: "cursive" }}
+            >
+              Ps. Jim Emmitt Konadu
+            </p>
+            <p
+              className="text-base italic font-light text-gray-600"
+              style={{ fontFamily: "cursive" }}
+            >
+              Lead Pastor
+            </p>
+          </motion.div>
         </div>
       </section>
+
       {/* About Church */}
       <section className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg">
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
@@ -132,7 +128,7 @@ const Home = () => {
             <a
               href="#"
               key={index}
-              className="flex flex-col items-center w-full md:w-1/3"
+              className="flex flex-col items-center w-full md:w-1/3 shadow-md"
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}

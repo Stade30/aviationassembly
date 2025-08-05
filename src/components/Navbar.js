@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { ChevronDown } from "lucide-react";
 import logo from "../assets/logo.png";
-
+import { hover } from "framer-motion";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,23 +47,39 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, url: "https://facebook.com/icgcaviation" },
-    { icon: FaInstagram, url: "https://www.instagram.com/icgc_aviation" },
-    { icon: FaTiktok, url: "https://tiktok.com/@icgc_aviation" },
-    { icon: FaYoutube, url: "https://youtube.com/@icgcaviation-o4i" },
+    {
+      icon: FaFacebook,
+      url: "https://facebook.com/icgcaviation",
+      hoverColor: "hover:text-blue-700",
+    },
+    {
+      icon: FaInstagram,
+      url: "https://www.instagram.com/icgc_aviation",
+      hoverColor: "hover:text-red-700",
+    },
+    {
+      icon: FaTiktok,
+      url: "https://tiktok.com/@icgc_aviation",
+      hoverColor: "hover:text-black",
+    },
+    {
+      icon: FaYoutube,
+      url: "https://youtube.com/@icgcaviation-o4i",
+      hoverColor: "hover:text-red-700",
+    },
   ];
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-globe">
       {/* Social Topbar */}
-      <div className="bg-topnavbg text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg">
-        {socialLinks.map(({ icon: Icon, url }, idx) => (
+      <div className="bg-slate-900/95 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg">
+        {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
           <a
             key={idx}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300"
+            className={`transition-colors duration-300 ${hoverColor}`}
           >
             <Icon />
           </a>
@@ -111,7 +127,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          
+
           {/* Hamburger Icon */}
           <div className="md:hidden">
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
