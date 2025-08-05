@@ -42,14 +42,6 @@ const Navbar = () => {
         { name: "Women", path: "/ministries/women" },
       ],
     },
-    {
-      name: "Member ?",
-      path: "/membership",
-      children: [
-        { name: "Log In", path: "/membership/login" },
-        { name: "Join Us", path: "/membership/join" },
-      ],
-    },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
