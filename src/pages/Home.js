@@ -138,7 +138,7 @@ const Home = () => {
                 <img
                   src={src}
                   alt={title}
-                  className="w-96 h-80 object-cover max-w-md h-auto shadow-lg mb-4 transform transition-transform duration-500 hover:scale-105"
+                  className="w-96 h-80 object-cover max-w-md shadow-lg mb-4 transform transition-transform duration-500 hover:scale-105"
                 />
                 <p className="text-xl text-center text-gray-500">{title}</p>
               </motion.div>
@@ -204,18 +204,18 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://wa.me/233XXXXXXXXX"
+              href="https://wa.me/233247759084"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition flex items-center gap-2"
+              className="bg-green-500 text-white px-8 py-3 rounded-lg shadow hover:bg-green-700 transition flex items-center gap-2"
             >
               <FaWhatsapp className="text-xl" /> Join WhatsApp
             </a>
             <a
-              href="https://t.me/yourchannel"
+              href="https://t.me/+Z5eea76QogczZmNk"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition flex items-center gap-2"
+              className="bg-blue-500 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition flex items-center gap-2"
             >
               <FaTelegramPlane className="text-xl" /> Join Telegram
             </a>
