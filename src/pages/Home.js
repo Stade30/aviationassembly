@@ -61,7 +61,7 @@ const Home = () => {
         className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm"
         data-aos="fade-up"
       >
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl shadow-xl p-8">
+        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl p-4 ">
           {/* Left: Welcome Message */}
           <div className="w-full md:w-2/3 space-y-6 mt-6">
             <h2 className="text-3xl font-extrabold text-[#163F1B] ">
@@ -134,7 +134,7 @@ const Home = () => {
             <a
               href="#"
               key={index}
-              className="flex flex-col items-center w-full md:w-1/3 shadow-md"
+              className="flex flex-col items-center w-full md:w-1/3"
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -144,7 +144,7 @@ const Home = () => {
                 <img
                   src={src}
                   alt={title}
-                  className="w-96 h-80 object-cover max-w-md shadow-lg mb-4 transform transition-transform duration-500 hover:scale-105"
+                  className="w-[920px] h-80 object-cover max-w-md shadow-xl mb-4 transform transition-transform duration-500 hover:scale-105"
                 />
                 <p className="text-xl text-center text-gray-500">{title}</p>
               </motion.div>
@@ -154,7 +154,7 @@ const Home = () => {
       </section>
       {/* Events */}
       <div
-        className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
+        className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 "
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>
@@ -199,7 +199,7 @@ const Home = () => {
       </div>
       {/* Social Feeds */}
       <div
-        className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
+        className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold mb-4">Social Feeds</h2>

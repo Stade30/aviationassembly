@@ -20,16 +20,26 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === name ? "" : name);
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   useEffect(() => {
-    // Check if the page is scrolled
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY) {
+        // scrolling down → hide navbar
+        setShow(false);
+      } else {
+        // scrolling up → show navbar
+        setShow(true);
+      }
+      setLastScrollY(window.scrollY);
     };
-    
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -49,18 +59,18 @@ const Navbar = () => {
   ];
 
   //Scroll to the top functionality
-   const navigate = useNavigate();
-   const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-   const handleNavClick = (path) => {
-     if (location.pathname === path) {
-       // If already on the same page, just scroll to top
-       window.scrollTo({ top: 0, behavior: "smooth" });
-     } else {
-       // Otherwise navigate normally
-       navigate(path);
-     }
-   };
+  const handleNavClick = (path) => {
+    if (location.pathname === path) {
+      // If already on the same page, just scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Otherwise navigate normally
+      navigate(path);
+    }
+  };
 
   const socialLinks = [
     {
@@ -86,9 +96,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-globe">
+    <header className="w-full z-50">
       {/* Social Topbar */}
-      <div className="bg-slate-900/95 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg">
+      <div className="bg-slate-900/95 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg fixed top-0 left-0 w-full z-50">
         {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
           <a
             key={idx}
@@ -104,10 +114,11 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className="bg-slate-200/80 backdrop-blur-md shadow-lg transition-all duration-300
-        fixed top-8 left-0 w-full z-50 py-4"
+        className={`bg-white backdrop-blur-md transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 ${
+          show ? "translate-y-8" : "-translate-y-full"
+        }`}
       >
-        <div className=" max-w-7xl mx-auto flex items-center justify-between py-4 px-4 ">
+        <div className=" max-w-7xl mx-auto flex items-center  justify-between py-6 px-4 ">
           <a href="/">
             <img src={logo} alt="Logo" className="h-12 sm:h-14" />
           </a>
