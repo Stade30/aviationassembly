@@ -54,8 +54,8 @@ const Navbar = () => {
         { name: "Women", path: "/ministries/women" },
       ],
     },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "Event", path: "/event" },
+    { name: "Sermon", path: "/sermon" },
   ];
 
   //Scroll to the top functionality
@@ -98,7 +98,7 @@ const Navbar = () => {
   return (
     <header className="w-full z-50">
       {/* Social Topbar */}
-      <div className="bg-slate-900/95 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg fixed top-0 left-0 w-full z-50">
+      <div className="bg-slate-800 text-white py-2 px-4 sm:px-14 flex justify-end gap-8 text-lg fixed top-0 left-0 w-full z-50">
         {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
           <a
             key={idx}
@@ -114,7 +114,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`bg-white backdrop-blur-md transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 ${
+        className={`bg-white backdrop-blur-md transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 shadow-sm shadow-slate-300 ${
           show ? "translate-y-8" : "-translate-y-full"
         }`}
       >

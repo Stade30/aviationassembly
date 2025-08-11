@@ -47,7 +47,7 @@ const Home = () => {
     {
       icon: FaXTwitter,
       url: "https://www.x.com/@icgcaviation",
-      hoverColor: "hover:text-black",
+      hoverColor: "hover:text-sky-700",
     },
   ];
 
@@ -56,7 +56,6 @@ const Home = () => {
       {/* Hero Section */}
       <HeroSlider />
       {/* Welcome Section */}
-
       <section
         className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm"
         data-aos="fade-up"
@@ -76,6 +75,7 @@ const Home = () => {
             </p>
 
             {/* Social Icons */}
+            
             <ul className="flex justify-center gap-5 pt-4">
               {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
                 <li key={idx}>
@@ -83,7 +83,7 @@ const Home = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-gray-500 hover:scale-110 transform transition-transform duration-300 ${hoverColor}`}
+                    className={`text-gray-500 hover:scale-90 transform transition-transform duration-300 ${hoverColor}`}
                   >
                     <Icon className="text-3xl" />
                   </a>
@@ -119,12 +119,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* About Church */}
-      <section
-        className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg"
-        data-aos="fade-up"
-      >
+
+      <section className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg">
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
           {[
             { src: leadershipImg, title: "Our Leadership" },
@@ -138,8 +135,9 @@ const Home = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: index * 0.3 }}
               >
                 <img
                   src={src}

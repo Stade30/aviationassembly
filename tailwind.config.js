@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         globe: "url('./assets/bg-globe.png')",
+        'church-gradient': 'linear-gradient(135deg, #f5efe5ff, #c1bcb3ff, #e6e6f1ff)',
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in-out",
