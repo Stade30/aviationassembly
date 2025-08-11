@@ -25,8 +25,8 @@ const PrayerRequest = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold text-center text-slate-900 mb-6">
+    <div className="max-w-xl mx-auto p-6 text-white ">
+      <h2 className="text-2xl font-bold text-center text-white text-slate-900 mb-6">
         Send a Prayer Request
       </h2>
 
@@ -88,7 +88,7 @@ const PrayerRequest = () => {
 
         <button
           type="submit"
-          className="w-full bg-amber-500/80 text-white px-6 py-2 rounded hover:bg-green-900 transition"
+          className="w-full bg-slate-800 text-white px-6 py-2 rounded hover:bg-green-900 transition"
         >
           Submit Request
         </button>

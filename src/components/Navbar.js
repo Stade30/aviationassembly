@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   FaInstagram,
   FaFacebook,
@@ -22,9 +22,11 @@ const Navbar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
+    // Check if the page is scrolled
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,7 +34,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Give", path: "/give" },
-    { name: "Media", path: "/give" },
+    { name: "Media", path: "/media" },
     {
       name: "Ministries",
       path: "/ministries",
@@ -45,6 +47,20 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
+
+  //Scroll to the top functionality
+   const navigate = useNavigate();
+   const location = useLocation();
+
+   const handleNavClick = (path) => {
+     if (location.pathname === path) {
+       // If already on the same page, just scroll to top
+       window.scrollTo({ top: 0, behavior: "smooth" });
+     } else {
+       // Otherwise navigate normally
+       navigate(path);
+     }
+   };
 
   const socialLinks = [
     {
@@ -105,6 +121,7 @@ const Navbar = () => {
                 after:content-[''] after:absolute after:right-0 after:bottom-0
                 after:h-[2px] after:w-0 after:bg-current after:transition-all
                 after:duration-300 hover:after:w-full"
+                onClick={() => handleNavClick(item.path)}
               >
                 <Link to={item.path} className="flex items-center gap-1">
                   {item.name}

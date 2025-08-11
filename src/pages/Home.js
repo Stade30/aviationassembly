@@ -57,7 +57,10 @@ const Home = () => {
       <HeroSlider />
       {/* Welcome Section */}
 
-      <section className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm">
+      <section
+        className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm"
+        data-aos="fade-up"
+      >
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl shadow-xl p-8">
           {/* Left: Welcome Message */}
           <div className="w-full md:w-2/3 space-y-6 mt-6">
@@ -118,7 +121,10 @@ const Home = () => {
       </section>
 
       {/* About Church */}
-      <section className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg">
+      <section
+        className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg"
+        data-aos="fade-up"
+      >
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
           {[
             { src: leadershipImg, title: "Our Leadership" },
@@ -147,12 +153,18 @@ const Home = () => {
         </div>
       </section>
       {/* Events */}
-      <div className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4">
+      <div
+        className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
+        data-aos="fade-up"
+      >
         <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>
         <p className="text-2xl">Stay tuned for our upcoming events!</p>
       </div>
       {/* Gallery */}
-      <div className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4">
+      <div
+        className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4"
+        data-aos="fade-up"
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Project Gallery
         </h2>
@@ -161,6 +173,7 @@ const Home = () => {
       <div
         className="relative bg-cover bg-center bg-no-repeat min-h-screen"
         style={{ backgroundImage: `url(${prayerrequest})` }}
+        data-aos="fade-up"
       >
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         <div
@@ -185,12 +198,15 @@ const Home = () => {
         </div>
       </div>
       {/* Social Feeds */}
-      <div className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4">
+      <div
+        className="bg-slate-300/60 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
+        data-aos="fade-up"
+      >
         <h2 className="text-3xl font-bold mb-4">Social Feeds</h2>
         <p className="text-2xl">Coming Soon. Stay tuned!</p>
       </div>
       {/* Connect with Us - WhatsApp & Telegram */}
-      <section className="w-full px-6 py-12 bg-green-50">
+      <section className="w-full px-6 py-12 bg-green-50" data-aos="fade-up">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold text-green-700">
