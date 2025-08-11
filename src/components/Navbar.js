@@ -114,8 +114,8 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`bg-white backdrop-blur-md transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 shadow-sm shadow-slate-300 ${
-          show ? "translate-y-8" : "-translate-y-full"
+        className={`bg-nav-gradient transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 shadow-sm shadow-slate-300 ${
+          show ? "translate-y-1" : "-translate-y-full"
         }`}
       >
         <div className=" max-w-7xl mx-auto flex items-center  justify-between py-6 px-4 ">

@@ -18,12 +18,6 @@ import PrayerRequest from "./PrayerRequest";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// URLs
-const directionsURL = "https://maps.app.goo.gl/JTFU7Yzajkv5d21B6";
-
-const churchlocation =
-  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3970.190320669375!2d-0.156507!3d5.685613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d4342b82bb9%3A0x4fd868df5d8896f5!2sICGC%20Aviation%20Assembly!5e0!3m2!1sen!2sgh!4v1752792040301!5m2!1sen!2sgh";
-
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -57,13 +51,13 @@ const Home = () => {
       <HeroSlider />
       {/* Welcome Section */}
       <section
-        className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative shadow-sm"
+        className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative"
         data-aos="fade-up"
       >
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl p-4 ">
           {/* Left: Welcome Message */}
-          <div className="w-full md:w-2/3 space-y-6 mt-6">
-            <h2 className="text-3xl font-extrabold text-[#163F1B] ">
+          <div className="w-full md:w-2/3 space-y-6 mt-24">
+            <h2 className="text-3xl font-extrabold text-slate-600 text-center">
               Welcome to ICGC Aviation
             </h2>
 
@@ -102,7 +96,7 @@ const Home = () => {
             <img
               src={leadpastor}
               alt="Lead Pastor"
-              className="w-48 h-48 rounded-full shadow-xl object-cover transition-transform duration-500 hover:scale-105"
+              className="w-72 h-[450px] rounded-50 shadow-xl object-cover transition-transform duration-500 hover:scale-105"
             />
             <p
               className="mt-3 text-lg italic font-light text-gray-600"
@@ -170,7 +164,7 @@ const Home = () => {
       {/* Prayer Request */}
       <div
         className="relative bg-cover bg-center bg-no-repeat min-h-screen"
-        style={{ backgroundImage: `url(${prayerrequest})` }}
+        
         data-aos="fade-up"
       >
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
@@ -236,28 +230,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Map Section */}
-      <div className="w-full px-4 py-8">
-        <div className="relative w-full h-[400px] max-w-7xl mx-auto border rounded shadow-lg overflow-hidden">
-          <iframe
-            src={churchlocation}
-            className="absolute top-0 left-0 w-full h-full"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Church Location Map"
-          ></iframe>
-          <a
-            href={directionsURL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 bg-white text-green-600 px-4 py-2 text-sm rounded shadow hover:bg-green-100 transition z-10"
-            title="Get Directions on Google Maps"
-          >
-            Get Directions
-          </a>
-        </div>
-      </div>
     </main>
   );
 };

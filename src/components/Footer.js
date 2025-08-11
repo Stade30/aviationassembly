@@ -4,6 +4,10 @@ import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 
 
 export default function Footer() {
+  const churchlocation =
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3970.190320669375!2d-0.156507!3d5.685613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d4342b82bb9%3A0x4fd868df5d8896f5!2sICGC%20Aviation%20Assembly!5e0!3m2!1sen!2sgh!4v1752792040301!5m2!1sen!2sgh";
+  const directionsURL = "https://maps.app.goo.gl/JTFU7Yzajkv5d21B6"; 
+
   return (
     <footer className="bg-slate-900 text-white py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,17 +92,30 @@ export default function Footer() {
         </div>
 
         {/* Our Location */}
-        <div>
+        <div clas>
           <h3 className="text-xl font-semibold mb-4 text-slate-200">
             Our Location
           </h3>
-          <ul className="space-y-4 text-slate-500"></ul>
-          <iframe
-            className="mt-4 w-full h-40 border-0 rounded-lg"
-            src=" "
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+          <div className="relative w-full h-60 mt-4">
+            <ul className="space-y-4 text-slate-500"></ul>
+            <iframe
+              src={churchlocation}
+              className="mt-4 w-full h-60 border-0 rounded-lg"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Church Location Map"
+            ></iframe>
+            <a
+              href={directionsURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-1 right-2 bg-white text-green-600 px-2 py-1 text-sm rounded shadow hover:bg-green-100 transition z-20"
+              title="Get Directions on Google Maps"
+            >
+              Get Directions on Google Maps
+            </a>
+          </div>
         </div>
       </div>
 
