@@ -40,7 +40,7 @@ const Home = () => {
     {
       icon: FaXTwitter,
       url: "https://www.x.com/@icgcaviation",
-      hoverColor: "hover:text-sky-700",
+      hoverColor: "hover:text-black",
     },
   ];
 
@@ -86,9 +86,7 @@ const Home = () => {
           </div>
 
           {/* Right: Profile Picture */}
-          <div
-            className="flex flex-col items-center w-full md:w-1/3"
-          >
+          <div className="flex flex-col items-center w-full md:w-1/3">
             <img
               src={leadpastor}
               alt="Lead Pastor"
@@ -142,18 +140,12 @@ const Home = () => {
         </div>
       </section>
       {/* Events */}
-      <div
-        className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 "
-        
-      >
+      <div className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 ">
         <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>
         <p className="text-2xl">Stay tuned for our upcoming events!</p>
       </div>
       {/* Gallery */}
-      <div
-        className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4"
-        
-      >
+      <div className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Project Gallery
         </h2>
@@ -194,15 +186,11 @@ const Home = () => {
         <p className="text-2xl">Coming Soon. Stay tuned!</p>
       </div>
       {/* Connect with Us - WhatsApp & Telegram */}
-      <section
-        className="w-full px-6 py-12 bg-church-gradient"
-      >
+      <section className="w-full px-6 py-12 bg-church-gradient">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-slate-900">
-              Connect With Us
-            </h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-black">Connect With Us</h2>
+            <p className="text-black text-md">
               Join our community on WhatsApp and Telegram for updates,
               inspiration, and fellowship.
             </p>

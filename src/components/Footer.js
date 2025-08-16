@@ -2,11 +2,10 @@ import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 
-
 export default function Footer() {
   const churchlocation =
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3970.190320669375!2d-0.156507!3d5.685613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d4342b82bb9%3A0x4fd868df5d8896f5!2sICGC%20Aviation%20Assembly!5e0!3m2!1sen!2sgh!4v1752792040301!5m2!1sen!2sgh";
-  const directionsURL = "https://maps.app.goo.gl/JTFU7Yzajkv5d21B6"; 
+  const directionsURL = "https://maps.app.goo.gl/JTFU7Yzajkv5d21B6";
 
   return (
     <footer className="bg-slate-900 text-white py-10 px-6">
@@ -123,6 +122,7 @@ export default function Footer() {
       <div className="mt-8 text-center text-md text-gray-600 border-t border-slate-400 pt-6">
         © {new Date().getFullYear()} Aviation Assembly.
         <span className="mx-2">All rights reserved.</span>
+        <p className="text-sm text-slate-700">Designed by StadeNet</p>
       </div>
     </footer>
   );

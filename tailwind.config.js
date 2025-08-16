@@ -18,7 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         globe: "url('./assets/bg-globe.png')",
-        'church-gradient': 'linear-gradient(135deg, #eaf5e3ff, #e8e3dcff, #d8e6e0ff)',
+        'church-gradient': 'linear-gradient(135deg, #898686ff, #e8dfd3ff, #9e9898ff)',
         'nav-gradient': 'linear-gradient(135deg, #e5f0e4ff, #e8e3dcff, #dff5f8ff)',
       },
       animation: {
