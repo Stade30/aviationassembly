@@ -12,9 +12,8 @@ import leadpastor from "../assets/ps.jpeg";
 import leadershipImg from "../assets/leadership.jpeg";
 import giveImg from "../assets/give.png";
 import declarationImg from "../assets/declaration.jpg";
-import prayerrequest from "../assets/open-bible.jpeg";
-import HeroSlider from "../components/HeroSlider";
 import PrayerRequest from "./PrayerRequest";
+import HeroSlider from "../components/HeroSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -51,7 +50,7 @@ const Home = () => {
       <HeroSlider />
       {/* Welcome Section */}
       <section
-        className="mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative"
+        className="bg-white mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative"
         data-aos="fade-up"
       >
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl p-4 ">
@@ -69,7 +68,7 @@ const Home = () => {
             </p>
 
             {/* Social Icons */}
-            
+
             <ul className="flex justify-center gap-5 pt-4">
               {socialLinks.map(({ icon: Icon, url, hoverColor }, idx) => (
                 <li key={idx}>
@@ -87,10 +86,7 @@ const Home = () => {
           </div>
 
           {/* Right: Profile Picture */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div
             className="flex flex-col items-center w-full md:w-1/3"
           >
             <img
@@ -110,9 +106,10 @@ const Home = () => {
             >
               Lead Pastor
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
+
       {/* About Church */}
 
       <section className="py-8 px-4 md:px-20 text-gray-800 w-full shadow-lg">
@@ -147,7 +144,7 @@ const Home = () => {
       {/* Events */}
       <div
         className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 "
-        data-aos="fade-up"
+        
       >
         <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>
         <p className="text-2xl">Stay tuned for our upcoming events!</p>
@@ -155,7 +152,7 @@ const Home = () => {
       {/* Gallery */}
       <div
         className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4"
-        data-aos="fade-up"
+        
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Project Gallery
@@ -163,20 +160,19 @@ const Home = () => {
       </div>
       {/* Prayer Request */}
       <div
-        className="relative bg-cover bg-center bg-no-repeat min-h-screen"
-        
+        className="relative bg-church-gradient min-h-screen"
         data-aos="fade-up"
       >
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 backdrop-blur-sm"></div>
         <div
           className="relative z-10 max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12"
           data-aos="fade-up"
         >
-          <div className="text-white w-full md:w-1/2 space-y-6 text-center md:text-left">
+          <div className="text-gray-900 w-full md:w-1/2 space-y-6 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold">
               Send a Prayer Request
             </h2>
-            <p className="text-xl">
+            <p className="text-xl text-gray-700">
               Let us pray for you. Your prayer requests are confidential and
               handled with care and faith.
             </p>
@@ -198,10 +194,12 @@ const Home = () => {
         <p className="text-2xl">Coming Soon. Stay tuned!</p>
       </div>
       {/* Connect with Us - WhatsApp & Telegram */}
-      <section className="w-full px-6 py-12 bg-green-50" data-aos="fade-up">
+      <section
+        className="w-full px-6 py-12 bg-church-gradient"
+      >
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-green-700">
+            <h2 className="text-3xl font-bold text-slate-900">
               Connect With Us
             </h2>
             <p className="text-gray-600">

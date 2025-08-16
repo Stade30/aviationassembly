@@ -121,8 +121,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="mt-8 text-center text-md text-gray-600 border-t border-slate-400 pt-6">
-        © {new Date().getFullYear()} International Central Gospel Church -
-        Aviation Assembly.
+        © {new Date().getFullYear()} Aviation Assembly.
         <span className="mx-2">All rights reserved.</span>
       </div>
     </footer>

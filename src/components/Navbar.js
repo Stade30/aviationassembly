@@ -114,24 +114,25 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`bg-nav-gradient transition-transform duration-300 fixed top-0 left-0 w-full z-40 py-4 shadow-sm shadow-slate-300 ${
+        className={`bg-white transition-transform duration-300 fixed top-0 left-0 w-full z-40 shadow-sm shadow-slate-300 ${
           show ? "translate-y-1" : "-translate-y-full"
         }`}
       >
-        <div className=" max-w-7xl mx-auto flex items-center  justify-between py-6 px-4 ">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-2 h-[130px]">
+          {/* Logo */}
           <a href="/">
-            <img src={logo} alt="Logo" className="h-12 sm:h-14" />
+            <img src={logo} alt="Logo" className="h-14 sm:h-14" />
           </a>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex gap-4 font-medium text-base items-center text-md">
+          <ul className="hidden md:flex gap-4 font-medium text-base items-center">
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className="relative group relative inline-block px-3 py-1 cursor-pointer
-                after:content-[''] after:absolute after:right-0 after:bottom-0
-                after:h-[2px] after:w-0 after:bg-current after:transition-all
-                after:duration-300 hover:after:w-full"
+                className="relative group inline-block px-3 cursor-pointer
+          after:content-[''] after:absolute after:right-0 after:bottom-0
+          after:h-[2px] after:w-0 after:bg-current after:transition-all
+          after:duration-300 hover:after:w-full"
                 onClick={() => handleNavClick(item.path)}
               >
                 <Link to={item.path} className="flex items-center gap-1">
@@ -141,7 +142,7 @@ const Navbar = () => {
                 {item.children && (
                   <ul className="absolute left-0 w-40 bg-white text-topnavbg shadow-lg rounded-md z-10 hidden group-hover:block mt-2">
                     {item.children.map((child, idx) => (
-                      <li key={idx} className="relative group">
+                      <li key={idx}>
                         <Link
                           to={child.path}
                           className="block px-4 py-2 hover:bg-gray-100"
