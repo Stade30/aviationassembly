@@ -50,7 +50,7 @@ const Home = () => {
       <HeroSlider />
       {/* Welcome Section */}
       <section
-        className="bg-white mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative"
+        className="bg-gray-100 mt-16 px-4 md:px-10 py-12 text-gray-800 w-full relative"
         data-aos="fade-up"
       >
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-start gap-10 bg-blue backdrop-blur-md rounded-xl p-4 ">
@@ -140,12 +140,12 @@ const Home = () => {
         </div>
       </section>
       {/* Events */}
-      <div className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 ">
+      <div className="bg-white text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4 ">
         <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>
         <p className="text-2xl">Stay tuned for our upcoming events!</p>
       </div>
       {/* Gallery */}
-      <div className="bg-white text-gray-800 w-full h-screen flex items-center justify-center px-4">
+      <div className="bg-gray-100 text-gray-800 w-full h-screen flex items-center justify-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Project Gallery
         </h2>
@@ -179,7 +179,7 @@ const Home = () => {
       </div>
       {/* Social Feeds */}
       <div
-        className="bg-slate-400 text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
+        className="bg-white text-gray-700 text-center w-full h-screen flex flex-col justify-center items-center px-4"
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold mb-4">Social Feeds</h2>

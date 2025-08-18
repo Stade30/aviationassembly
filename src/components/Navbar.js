@@ -114,7 +114,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`bg-white transition-transform duration-300 fixed top-0 left-0 w-full z-40 shadow-sm shadow-slate-300 ${
+        className={`bg-gray-100 transition-transform duration-300 fixed top-0 left-0 w-full z-40 shadow-sm shadow-slate-300 ${
           show ? "translate-y-1" : "-translate-y-full"
         }`}
       >
